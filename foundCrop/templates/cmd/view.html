@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block mainpageclass %}{% endblock %}
+{% block maintitleh1%}Command : {{ cmd.id }}{% endblock %}
+{% block dashbackurl %}{% url 'home' %}{% endblock %}
+{% block dashboardback %}Home{% endblock %}
+{% block dashboardviewtitle %}My Command{% endblock %}
+{% block dashboardbody %}
+<div class="col">
+  <div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">All your command products</h5>
+            <div class="btn btn-primary rounded">
+              <i class="fa-solid fa-plus"></i>
+              <a class="text-white" href="{% url 'add_to_card' %}">new add a cart</a>
+            </div>
+        </div>
+
+      <!-- Default Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Product total price</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for detail in details %}
+          <tr>
+            <th scope="row">{{ detail.pk }}</th>
+            <td>{{ detail.product.name }}</td>
+            <td>{{ detail.count }}</td>
+            <td>{{ detail.total() }}</td>
+            <td><i class="fa-solid popup fa-ellipsis-vertical" role="button"></i></td>
+            <div class="popuptext">
+              <ul class="list-group list-group-flush" role="button">
+                <li class="list-group-item"><a href="{{ detail.get_absolute_url }}">update</a></li>
+                <!--li class="list-group-item"><a href="">Show details</a></li-->
+                <li class="list-group-item"><a href="{{ detail.get_absolute_del_url }}">Delete</a></li>
+              </ul>
+            </div>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="3">Total price</th>
+            <th>{{ cmd.total() }}</th>
+          </tr>
+          <tr>
+            <th colspan="3"></th>
+            <th><a href="{% url 'buy' %}">buy</a></th>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- End Default Table Example -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block ender %}
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+{% endblock %}

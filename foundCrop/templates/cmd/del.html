@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block mainpageclass %}{% endblock %}
+{% block maintitleh1%}Delete command{% endblock %}
+{% block dashbackurl %}{% url 'home' %}{% endblock %}
+{% block dashboardback %}Home{% endblock %}
+{% block olli %}<li class="breadcrumb-item">Command</li>{% endblock %}
+{% block dashboardviewtitle %}Command Delete{% endblock %}
+{% block dashboardbody %}
+<div class="col">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Command details</h5>
+              <!-- Multi Columns Form -->
+      <form class="row g-3" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center col-md-6">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+          <div class="text-center col-md-6">
+          <button type="button" class="btn btn-primary"><a href="{% url 'productView' %}">Cancel</a></button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block ender %}
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+{% endblock %}

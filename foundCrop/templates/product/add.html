@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mainpageclass %}{% endblock %}
+{% block maintitleh1%}Add a product{% endblock %}
+{% block dashbackurl %}{% url 'dashboard' %}{% endblock %}
+{% block dashboardback %}Dashboard{% endblock %}
+{% block olli %}<li class="breadcrumb-item">Product</li>{% endblock %}
+{% block dashboardviewtitle %}Add a product{% endblock %}
+{% block dashboardbody %}
+<div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Products details</h5>
+              <!-- Multi Columns Form -->
+              <form class="row g-3" action="{% url 'productAdd' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form><!-- End Multi Columns Form -->
+            </div>
+          </div>
+        </div>
+{% endblock %}
+{% block ender %}
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block mainpageclass %}{% endblock %}
+{% block maintitleh1%}Update to Cart{% endblock %}
+{% block dashbackurl %}{% url 'home' %}{% endblock %}
+{% block dashboardback %}Home{% endblock %}
+{% block olli %}<li class="breadcrumb-item">Cart</li>{% endblock %}
+{% block dashboardviewtitle %}Update to cart{% endblock %}
+{% block dashboardbody %}
+<div class="col">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Cart details</h5>
+              <!-- Multi Columns Form -->
+      <form class="row g-3" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block ender %}
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+{% endblock %}

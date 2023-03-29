@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block mainpageclass %}{% endblock %}
+{% block maintitleh1%}Delete product{% endblock %}
+{% block dashbackurl %}{% url 'home' %}{% endblock %}
+{% block dashboardback %}Home{% endblock %}
+{% block olli %}<li class="breadcrumb-item">Cart - Product</li>{% endblock %}
+{% block dashboardviewtitle %}Delete in the cart{% endblock %}
+{% block dashboardbody %}
+<div class="col">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Cart details</h5>
+              <!-- Multi Columns Form -->
+      <form class="row g-3" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Product name</th>
+              <th scope="col">Catégorie</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{{ detail.pk }}</th>
+              <td>{{ detail.name }}</td>
+              <td>{{ detail.category }}</td>
+              <td>{{ detail.price }}</td>
+            </tr>
+          </tbody>
+        </tbody>
+      </table>
+        <div class="text-center col-md-6">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+          <div class="text-center col-md-6">
+          <button type="button" class="btn btn-primary"><a href="{% url 'cmdView' %}">Cancel</a></button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block ender %}
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+{% endblock %}
