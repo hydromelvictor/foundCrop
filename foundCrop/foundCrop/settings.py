@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'foundCrop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'exchange.sql',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'foundcrop_exchange',
+        'USER': 'foundcrop',
+        'PASSWORD': 'AsDFGhhu45',
+        'HOST': 'mysql-foundcrop.alwaysdata.net',
+        'PORT': 3306
     }
 }
 
