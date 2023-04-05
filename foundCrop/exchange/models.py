@@ -82,22 +82,6 @@ class Product(models.Model):
         """
         return self.name
 
-    def get_absolute_url(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
-        return reverse('productUpdate', kwargs={'prd_id': self.pk})
-    
-    def get_absolute_del_url(self):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
-        return reverse('productDel', kwargs={'prd_id': self.pk})
-
     def get_absolute_add_url(self):
         """_summary_
 

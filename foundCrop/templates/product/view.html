@@ -38,9 +38,9 @@
             <td><i class="fa-solid popup fa-ellipsis-vertical" role="button"></i></td>
             <div class="popuptext">
               <ul class="list-group list-group-flush" role="button">
-                <li class="list-group-item"><a href="{{ obj.get_absolute_url }}">update</a></li>
+                <li class="list-group-item"><a href="{% url 'productUpdate' obj.pk %}">update</a></li>
                 <!--li class="list-group-item"><a href="">Show details</a></li-->
-                <li class="list-group-item"><a href="{{ obj.get_absolute_del_url }}">Delete</a></li>
+                <li class="list-group-item"><a href="{% url 'productDel' obj.pk %}">Delete</a></li>
               </ul>
             </div>
           </tr>

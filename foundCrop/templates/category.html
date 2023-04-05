@@ -52,7 +52,7 @@
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                       {% for item in food %}
-                      <a href="/category/{{ item }}" class="nav-item nav-link">{{ item }}</a>
+                      <a href="{% url 'category' item %}" class="nav-item nav-link">{{ item }}</a>
                       {% endfor %}
                     </div>
                 </nav>
@@ -98,7 +98,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'add_to_cart' %}/{{ obj.id }}">Add to cart</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'add_to_cart' obj.id %}">Add to cart</a></div>
                         </div>
                     </div>
                 </div>
