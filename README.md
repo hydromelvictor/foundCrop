@@ -3,7 +3,7 @@ FOUNDCROP
 
 foundCrop, why?
 
-Me Victor Doledji and my partner Samadou Ouro are residents and natives of Togo, a country where food variety can become very rare.
+Me Victor Doledji and my partner Samadou Ouro are residents and natives of Togo, a country where food variety can become very rare.<br>
 So in the search for a portfolio project, we made a fine analysis of the humanitarian and educational problems.
 Thus two problems seemed the most obvious to us and the possibility of a variable choice in terms of consumption was the obvious choice.
 
@@ -14,14 +14,18 @@ Well we based our project on Django, a powerful framework that we discovered dur
 
 Our project is working normally since it is not finished
 
-1. A public space visible to all where food products are displayed including an image of the item its unit price and a button leading to payment
+1. **A public space visible to all where food products are displayed including an image of the item its unit price and a button leading to payment**
 (We haven't managed the payment yet but soon)
 
-![]()
+<br><br>
+[landing page](https://harkinder-dark.github.io/foundCrop/)<br><br>
 
-2. A user registration area and a private area for everyone.
+![home page](img/f1.png)
+![home page](img/f2.png)
 
-![]()
+2. **A user registration area and a private area for everyone.**
+
+![Sign up](img/f5.png)
 
 During registration, I choose a professional account where he can buy and sell or a customer account where he can only buy.
 
@@ -30,27 +34,27 @@ You have access to the dashboard with your sales and purchase statistics
 A space for adding, modifying and deleting products for professional accounts
 A profile space
 
-* DASHBOARD
+* **DASHBOARD**
 
-![]()
+![](img/f6.png)
 
-* PRODUCTS
-    * PRODUCTS VIEWS
-        * ![]()
-    * PRODUCTS ADD
-        * ![]()
-    * PRODUCTS UPDATE
-        * ![]()
-    * PRODUCTS REMOVE
-        * ![]()
-* PROFILE
-    * YOUR PERSONNAL INFORMATION
-        * ![]()
-    * UPDATE YOUR PERSONNAL INFORMATION
-        * ![]()
-    * ADD YOUR CARD INFORMATION FOR PAYMENT
-        * ![]()
+* **PRODUCTS**
+    * **PRODUCTS VIEWS**
+        * ![](img/f7.png)
+    * **PRODUCTS ADD**
+        * ![](img/f8.png)
+    * **PRODUCTS UPDATE**
+        * ![](img/f11.png)
+    * **PRODUCTS REMOVE**
+        * ![](img/f10.png)
+* **PROFILE**
+    * **YOUR PERSONNAL INFORMATION**
+        * ![](img/f12.png)
+    * **UPDATE YOUR PERSONNAL INFORMATION**
+        * ![](img/f14.png)
+    * **ADD YOUR CARD INFORMATION FOR PAYMENT**
+        * ![](img/f13.png)
 
 
-* PAYMENT
+* **PAYMENT**
 And finally a logout
