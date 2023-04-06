@@ -14,6 +14,8 @@ Well we based our project on Django, a powerful framework that we discovered dur
 
 Our project is working normally since it is not finished
 
+![]()
+
 1. **A public space visible to all where food products are displayed including an image of the item its unit price and a button leading to payment**
 (We haven't managed the payment yet but soon)
 
